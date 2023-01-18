@@ -31,6 +31,12 @@ async function getHome () {
       img,
       url
     })
+
+    console.log({
+      tittle,
+      img,
+      url
+    })
   })
   return home
 }
