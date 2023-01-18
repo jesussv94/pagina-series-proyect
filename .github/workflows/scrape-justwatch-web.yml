@@ -22,5 +22,5 @@ jobs:
           node scrap/index.js
           git config --global user.email "jesussv94@gmail.com"
           git config --global user.name "jesussv94"
-          git commit -m "Update Database"
+          git commit -am "Update Database"
           git push origin main
