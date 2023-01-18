@@ -1,0 +1,21 @@
+import { Hono } from 'hono'
+import home from '../db/home.json'
+
+const app = new Hono()
+
+app.get('/', (ctx) => {
+  return ctx.json([
+    {
+      endpoint: '/home',
+      description: 'Returns home data'
+    }
+  ])
+})
+
+app.get('/home', (ctx) => {
+  return ctx.json(home)
+})
+
+export default app
+
+// Open at http://localhost:8787/home
