@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.17.0
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.18.2
+          run_install: true
       - run: 
           node scrap/index.js
           git commit -m "Update Database"
