@@ -20,6 +20,5 @@ jobs:
       - run: npm ci
       - run: |
           node scrap/index.js
-          git config user.name jesussv94
-          git commit -am "Update Database"
+          git commit -m "Update Database"
           git push origin main
