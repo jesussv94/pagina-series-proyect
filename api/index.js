@@ -18,4 +18,5 @@ app.get('/home', (ctx) => {
 
 export default app
 
+// npm run dev:api
 // Open at http://localhost:8787/home
