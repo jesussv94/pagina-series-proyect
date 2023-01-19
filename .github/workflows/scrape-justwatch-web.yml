@@ -19,7 +19,7 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: |
-          node scrap/index.js
+          npm run scrap
           git config user.name Bot
           git commit -am "Update Database"
           git push origin main
