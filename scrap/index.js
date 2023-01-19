@@ -4,8 +4,8 @@ import { writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const URLS = {
-  // home: 'https://www.justwatch.com/es/series',
-  home: 'https://www.justwatch.com/es/series?genres=msc&exclude_genres=spt&release_year_from=2023',
+  home: 'https://www.justwatch.com/es/series',
+  // home: 'https://www.justwatch.com/es/series?genres=msc&exclude_genres=spt&release_year_from=2023',
   baseUrl: 'https://www.justwatch.com'
 }
 
