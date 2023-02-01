@@ -1,8 +1,8 @@
 [
   {
-    "tittle": "Sometimes When We Touch",
-    "img": "https://www.justwatch.com/images/poster/302344624/s166/sometimes-when-we-touch",
-    "url": "/es/serie/sometimes-when-we-touch"
+    "tittle": "SUPER JUNIOR: THE LAST MAN STANDING",
+    "img": "https://www.justwatch.com/images/poster/302320955/s166/super-junior-the-last-man-standing",
+    "url": "/es/serie/super-junior-the-last-man-standing"
   },
   {
     "tittle": "Daisy Jones & The Six",
@@ -10,8 +10,18 @@
     "url": "/es/serie/daisy-jones-y-the-six"
   },
   {
+    "tittle": "Sometimes When We Touch",
+    "img": "https://www.justwatch.com/images/poster/302344624/s166/sometimes-when-we-touch",
+    "url": "/es/serie/sometimes-when-we-touch"
+  },
+  {
     "tittle": "El club de los graves",
     "img": "https://www.justwatch.com/images/poster/301799772/s166/el-club-de-los-graves",
     "url": "/es/serie/el-club-de-los-graves"
+  },
+  {
+    "tittle": "Dear Mama",
+    "img": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "url": "/es/serie/dear-mama"
   }
 ]
