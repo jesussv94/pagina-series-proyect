@@ -10,7 +10,7 @@ const genero = ['Acción','Fantasia','Ciencia ficción']
 
 <Layout title="SeriesDev">
   <header class="flex border-4 p-2">
-	<h1 class="text-4xl text-red-500 ml-3">SeriesDev</h1>
+	<div class="text-4xl text-red-500 ml-3">SeriesDev</div>
 	<nav class="flex ml-8 items-center">
 		<ul class="flex text-2xl">
 			<li>
@@ -45,6 +45,7 @@ const genero = ['Acción','Fantasia','Ciencia ficción']
 	  ))}
 	</div>
   </main>
+  <footer>Info footer</footer>
 </Layout>
 
 <style>
@@ -68,8 +69,10 @@ const genero = ['Acción','Fantasia','Ciencia ficción']
 		padding: 0.2rem;
 	}
 	main {
+		background-color: silver;
 		margin: auto;
 		padding: 1.5rem;
 		display: flex;
+		height: 100vh;
 	}
 </style>

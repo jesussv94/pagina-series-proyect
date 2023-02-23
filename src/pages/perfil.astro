@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title="SeriesDev">
   <header class="flex border-4 p-2">
-	<h1 class="text-4xl text-red-500 ml-3">SeriesDev</h1>
+	<div class="text-4xl text-red-500 ml-3">SeriesDev</div>
 	<nav class="flex ml-8 items-center">
 		<ul class="flex text-2xl">
 			<li class="mr-8">
@@ -20,18 +20,44 @@ import Layout from '../layouts/Layout.astro'
 		</div>
 	</nav>
   </header>
-  <main> 
-	<div>Mostrar todo</div>
-	<div>Mostrar según filtro género</div>
-	
+  <main class="flex"> 
+    <div class="flex m-auto mt-28 content-center">
+        <section class="border-r-4 p-4">
+            <div>
+                <div id="foto">Foto de Perfil</div>
+            </div>
+            <div class="pt-4">
+                Nombre usuario
+            </div>
+            <div>info usuario</div>
+        </section>
+        <section>
+            <div class="text-3xl">Series siguiendo:</div>
+            <table class="text-center text-xl">
+                <th>Título</th><th>Episodio</th><th>Temporada</th><th>Puntuación</th><th>Comentarios</th>
+                <tr>
+                    <td>Serie</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>Expandir para leer</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    mensajes privados 
   </main>
+  <footer>info footer</footer>
 </Layout>
-
 
 <style>
     *{
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
+    main{
+        background-color: silver;
+        height: 100vh;
+    }
 	ul li{
 		margin-right: 8rem;
 	}
@@ -42,4 +68,26 @@ import Layout from '../layouts/Layout.astro'
 		background-color: paleturquoise;
 		padding: 0.2rem;
 	}
+    section{
+        margin: 0.5rem;
+    
+    }
+    #foto{
+        background-color: red;
+        border-radius: 100%;
+        padding: 4rem;
+    }
+    table{
+        margin-top: 1rem;
+        border: 2px solid;
+        background-color: paleturquoise;
+    }
+    table th{
+        border: 2px solid;
+        padding: 0.5rem;
+    }
+    td{
+        border: 2px solid;
+        padding: 0.5rem;
+    }
 </style>

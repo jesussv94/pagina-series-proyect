@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio'
 import fetch from 'cross-fetch'
-import { writeDBFile, SERIES, SERIEDETAILS } from '../db/index.js'
+import { writeDBFile, SERIES } from '../db/index.js'
 
 const response = await fetch('http://localhost:8787/details')
 const serieBusqueda = await response.json()
