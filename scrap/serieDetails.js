@@ -23,9 +23,9 @@ async function getSerieDetails () {
     $rows.each((index, el) => {
       const img = $(el).find('.title-poster picture > source:nth-child(1)').attr('data-srcset')
       const title = $(el).find('.title-block h1').text().trim()
-      const synopsis = $(el).find('.jw-info-box__container-content > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > p:nth-child(1)').text()
-      const gender = $(el).find('.title-info > div:nth-child(3) > div.detail-infos__value').text()
-      const season = $(el).find('.hidden-horizontal-scrollbar__items .horizontal-title-list__item__caption').text()
+      const synopsis = $(el).find('.jw-info-box__container-content > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > p > span').text()
+      const gender = $(el).find('.title-info > div:nth-child(3) > div.detail-infos__value').text().trim()
+      const season = $(el).find('.hidden-horizontal-scrollbar__items .horizontal-title-list__item__caption').text().trim()
 
       serieDetails.push({
         img,
@@ -33,9 +33,6 @@ async function getSerieDetails () {
         synopsis,
         gender,
         season
-      })
-      console.log({
-        title
       })
     })
   }
