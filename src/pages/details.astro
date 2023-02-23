@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const response = await fetch('http://localhost:8787/serie/:title')
+const details = await response.json()
+---
+
+<Layout title="SeriesDev">
+    <header class="flex items-center border-4 p-2">
+      <h1 class="text-4xl text-red-500 ml-3">SeriesDev</h1>
+      <nav class="flex ml-8">
+          <ul class="flex text-2xl">
+              <li class="mr-8">
+                  <a href="/series">Series</a>
+              </li>
+              <li>
+                  <a href="/perfil">Perfil</a>	
+              </li>
+          </ul>
+          <div class="flex-end text-2xl items-end ml-8">
+              <button>Login</button>
+              <button>sign in</button>
+          </div>
+      </nav>
+    </header>
+    <main>
+        {details.map(({img, title, synopsis, gender, season}) => (
+            <div>
+              <img class="h-72 w-52 mr-5 bg-center" src={img} alt={title}>
+              <h2 class="mr-5">{title}</h2>
+              <div>
+                <h4>{gender}</h4>
+              </div>
+              <p>{synopsis}</p>
+              {season}
+            </div>
+          ))}
+      </main>
+    </Layout>

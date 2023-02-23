@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="SeriesDev">
+  <header class="flex border-4 p-2">
+	<h1 class="text-4xl text-red-500 ml-3">SeriesDev</h1>
+	<nav class="flex ml-8 items-center">
+		<ul class="flex text-2xl">
+			<li class="mr-8">
+				<a href="/">Series</a>
+			</li>
+			<li>
+				<a href="/perfil">Perfil</a>	
+			</li>
+		</ul>
+		<div class="flex ml-52 items-center text-2xl">
+			<button>Login</button>
+			<button>sign in</button>
+		</div>
+	</nav>
+  </header>
+  <main> 
+	<div>Mostrar todo</div>
+	<div>Mostrar según filtro género</div>
+	
+  </main>
+</Layout>
+
+
+<style>
+    *{
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	ul li{
+		margin-right: 8rem;
+	}
+    button{
+		margin-left: 1rem;
+		border: 2px solid black;
+		border-radius: 25%;
+		background-color: paleturquoise;
+		padding: 0.2rem;
+	}
+</style>

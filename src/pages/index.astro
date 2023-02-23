@@ -1,27 +1,72 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import gender from '../utils/gender.js'
 
 const response = await fetch('http://localhost:8787/home')
 const series = await response.json()
 const baseUrl= 'https://www.justwatch.com'
+const genero = ['Acción','Fantasia','Ciencia ficción']
 ---
 
 <Layout title="SeriesDev">
-  <header>
+  <header class="flex border-4 p-2">
 	<h1 class="text-4xl text-red-500 ml-3">SeriesDev</h1>
-  </header>
-  <main>
-	{series.map((serie) => (
-		<div>
-		  <a href={baseUrl+serie.url}/>
-		  <img class="mr-5 bg-center" src={serie.img}>
-		  <h2 class="mr-5">{serie.tittle}</h2>
+	<nav class="flex ml-8 items-center">
+		<ul class="flex text-2xl">
+			<li>
+				<a href="/">Series</a>
+			</li>
+			<li>
+				<a href="/perfil">Perfil</a>	
+			</li>
+		</ul>
+		<select name="filtro" id="filtro">
+			<option>Filter</option>
+			{gender.map((gen) => (
+				<option value={gen}>{gen}</option>
+			  ))}
+		</select>
+		<div class="flex ml-52 items-center text-2xl">
+			<button>Login</button>
+			<button>sign in</button>
 		</div>
+	</nav>
+  </header>
+  <main> 
+	<div>Mostrar todo</div>
+	<div>Mostrar según filtro género</div>
+	<div class="flex flex-wrap">
+	{series.slice(0, 10).map(({url, img, title}) => (
+		<a href= {`/serie/${title}`}> 
+		  <img class="h-72 w-52 mr-5 bg-center" src={img} alt={title}>
+		  <data hidden>{baseUrl+url}</data>
+		  <h2 class="mr-5">{title}</h2>
+		</a>
 	  ))}
+	</div>
   </main>
 </Layout>
 
 <style>
+	*{
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	ul li{
+		margin-right: 8rem;
+	}
+	select{
+		border: 2px solid black;
+		border-radius: 35%;
+		padding: 0.2rem;
+		font-size: large;
+	}
+	button{
+		margin-left: 1rem;
+		border: 2px solid black;
+		border-radius: 25%;
+		background-color: paleturquoise;
+		padding: 0.2rem;
+	}
 	main {
 		margin: auto;
 		padding: 1.5rem;

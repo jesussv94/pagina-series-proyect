@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "scrap": "node scrap/index.js",
+    "scrap:details": "node scrap/serieDetails.js",
     "dev:api": "wrangler dev api/index.js",
     "publish:api": "wrangler publish api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
